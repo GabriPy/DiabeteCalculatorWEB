@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore diabetico</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div class="div-centrato">
+        <h1 class="titolo">Calcolatrice Per Diabetici</h1>
+        <script src="js/index.js"></script>
+
+
+
+
+        <div id="divcorrezione">
+            <button id="buttonCorrezione" onclick="pressbuttonCorrezione()">Correzione</button><br />
+            <!-- <form action="none"> -->
+            <div id="inputCorrezione" class="hidden">
+                <!-- <label>ciao</label><br /> -->
+                <input id="glicemia" placeholder="Inserisci glicemia"><br />
+                <label class="switch">Notte
+                    <input type="checkbox" id="notte">
+                </label><br />
+                <button onclick="pressbuttonCorreggi()">Calcola correzione</button>
+                <h3 id="outputCorreggi"></h3>
+            </div>
+            <!-- </form> -->
+        </div>
+
+
+
+
+
+        <div id="divinsulina">
+            <button id="buttonInsulina" onclick="pressbuttonInsulina()">Insulina</button><br />
+            <!-- <form action="none"> -->
+            <div id="inputInsulina" class="hidden">
+                <label>ciao</label><br />
+                <input id="carboidrati" placeholder="Inserisci carboidrati"><br />
+                <button onclick="pressbuttonDaCarboAInsu()">Calcola insulina</button>
+                <h3 id="outputInsulina"></h3>
+            </div>
+            <!-- </form> -->
+        </div>
+
+
+
+
+
+        <div id="divimpostazioni">
+            <button id="buttonImpostazioni" onclick="pressbuttonImpostazioni()">Impostazioni</button><br />
+            <div id="spanImpostazioni" class="hidden">
+                <label>Fattore correzione diurno</label><br />
+                <input id="inputdiurno" placeholder="Fattore di correzione diurno" value="35"> <br />
+                <label>Fattore correzione notturno</label><br />
+                <input id="inputnotturno" placeholder="Fattore di correzione notturno" value="40"> <br />
+                <button onclick="modificaImpostazioni()">Modifica</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+
+</html>

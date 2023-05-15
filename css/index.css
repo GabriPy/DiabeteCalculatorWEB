@@ -1,0 +1,48 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+.div-centrato {
+    /* display: flex; */
+    /* Abilita il flexbox */
+    justify-content: center;
+    /* Allinea gli elementi figlio al centro orizzontalmente */
+    align-items: center;
+    /* Allinea gli elementi figlio al centro verticalmente */
+    /* height: 100vh; */
+    /* o qualsiasi altezza desiderata */
+    text-align: center;
+    /* Allinea il testo al centro all'interno del div */
+    margin-top: 260px;
+}
+
+.titolo {
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+button:hover {
+    color: white;
+    background-color: hsl(300, 50%, 50%);
+}
+
+.hidden {
+    display: none;
+}
