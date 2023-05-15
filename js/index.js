@@ -57,13 +57,13 @@ function pressbuttonCorrezione() {
 
 function pressbuttonCorreggi() {
     var glicemia = document.getElementById('glicemia').value;
-
+    var glicemiameno120 = glicemia - 120;
     var checkbox = document.getElementById('notte');
 
     if (checkbox.checked) {
-        var insulina = glicemia / rapportoCorrezioneNotturno;
+        var insulina = glicemiameno120 / rapportoCorrezioneNotturno;
     } else {
-        var insulina = glicemia / rapportoCorrezioneDiurno;
+        var insulina = glicemiameno120 / rapportoCorrezioneDiurno;
     }
 
     var h3correzione = document.getElementById('outputCorreggi');
