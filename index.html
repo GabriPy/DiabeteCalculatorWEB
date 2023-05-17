@@ -2,6 +2,8 @@
 <html lang="it">
 
 <head>
+    <script src="https://kit.fontawesome.com/8c3d15df90.js" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +15,6 @@
     <div class="div-centrato">
         <h1 class="titolo">Calcolatrice Per Diabetici</h1>
         <script src="./js/index.js"></script>
-
-
-
 
         <div id="divcorrezione">
             <button id="buttonCorrezione" onclick="pressbuttonCorrezione()">Correzione</button><br />
@@ -32,15 +31,11 @@
             <!-- </form> -->
         </div>
 
-
-
-
-
         <div id="divinsulina">
             <button id="buttonInsulina" onclick="pressbuttonInsulina()">Insulina</button><br />
             <!-- <form action="none"> -->
             <div id="inputInsulina" class="hidden">
-                <label>ciao</label><br />
+                <label>Inserisci carboidrati</label><br />
                 <input id="carboidrati" placeholder="Inserisci carboidrati"><br />
                 <button onclick="pressbuttonDaCarboAInsu()">Calcola insulina</button>
                 <h3 id="outputInsulina"></h3>
@@ -48,23 +43,48 @@
             <!-- </form> -->
         </div>
 
-
-
-
-
         <div id="divimpostazioni">
             <button id="buttonImpostazioni" onclick="pressbuttonImpostazioni()">Impostazioni</button><br />
             <div id="spanImpostazioni" class="hidden">
                 <label>Fattore correzione diurno</label><br />
-                <input id="inputdiurno" placeholder="Fattore di correzione diurno" value="35"> <br />
+                <input id="inputdiurno" placeholder="Fattore di correzione diurno" value=""> <br />
                 <label>Fattore correzione notturno</label><br />
-                <input id="inputnotturno" placeholder="Fattore di correzione notturno" value="40"> <br />
+                <input id="inputnotturno" placeholder="Fattore di correzione notturno" value=""> <br />
+                <label>Assorbimento carboidrati per 1 unità</label><br />
+                <input id="inputassorbimento" placeholder="Assorbimento carboidrati" value=""><br />
                 <button onclick="modificaImpostazioni()">Modifica</button>
             </div>
         </div>
 
+        <div id="iconCalcolatrice">
+            <i class="fa-solid fa-calculator iconacalcolatrice" onclick="appariCalcolatrice()"></i>
+        </div>
 
+        <div id="moltiplicatore" class="hidden">
+            <label class="labelmoltiplicatore">Carboidrati / 100g</label><input id="cho100g"></input><br>
+            <label class="labelmoltiplicatore">Peso cibo</label><input id="peso"></input><br>
+            <label class="labelmoltiplicatore">= <span id="risultatoPeso"></span></label>
 
+            <br />
+            <button class="buttonmoltiplicatore" onclick="calcolaMoltiplicatore()">Calcola</button>
+        </div>
+    </div>
+
+    <span id="pulsanteinfo" class="help-btn" onclick="apriPopup()">?</span>
+
+    <div id="divNascondiPopup" class="hidden">
+        <div class="popup-container" id="popupContainer">
+            <!-- Finestra del popup -->
+            <div class="popup">
+                <span class="close-btn" onclick="chiudiPopup()">X</span>
+                <h2>Benvenuto nell'utility per diabete!</h2>
+                <p>Per chiudere questo popup e procedere con l'utilizzo, premi la x in alto a destra.</p>
+                <p>All'interno di questa utility potrai fare tutte le operazioni utili per il diabete:</p>
+                <p>Calcolo correzioni, calcolo insulina e calcolo carboidrati.</p>
+                <p>Per personalizzare l'app con i tuoi dati, vai nella sezione impostazioni</p>
+                <p>Questi dati non vengono salvati, quindi ogni volta che riavvii dovrai riinserirli.</p>
+            </div>
+        </div>
     </div>
 </body>
 
